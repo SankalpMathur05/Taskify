@@ -11,7 +11,7 @@ const SignUpLayout = ({ children }) => {
       <div className="signup-page">
         <nav className="navbar">
           <div className="logo-container">
-            <img src={logo} alt="Taskify Logo" className="logo-image" />
+            <Link to="/" className="logo-image"><img src={logo} alt="Taskify Logo"/></Link>
           </div>
       
         <div className="action-buttons">

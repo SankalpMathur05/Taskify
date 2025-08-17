@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import Input from '../../components/Inputs/Input';
 
 const AuthLayout = ({ children }) => {
-    const [remember, setRemember] = useState(false); // Remove when login is implemented
+  const [remember, setRemember] = useState(false); // Remove when login is implemented
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -22,11 +22,11 @@ const AuthLayout = ({ children }) => {
       <div className="login-page">
         <nav className="navbar">
           <div className="logo-container">
-            <img src={logo} alt="Taskify Logo" className="logo-image" />
+            <Link to="/" className="logo-image"><img src={logo} alt="Taskify Logo"/></Link>
           </div>
       
         <div className="action-buttons">
-          <Link to="/register" className="primary-btn">Sign up</Link>
+          <Link to="/signup" className="primary-btn">Sign up</Link>
           </div>
         </nav>
 

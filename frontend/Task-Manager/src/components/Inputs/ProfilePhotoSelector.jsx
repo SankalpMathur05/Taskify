@@ -35,12 +35,12 @@ const ProfilePhotoSelector = ({ image, setImage }) => {
       className= "hidden"
     />
     {!image ? (
-      <div className="w-20 h-20 flex items-center justify-center bg-red-100/50 rounded-full relative cursor-pointer">
+      <div className="w-20 h-20 flex items-center justify-center bg-red-100 rounded-full relative cursor-pointer">
         <LuUser className="text-4xl text-gray-300" />
 
         <button
           type="button"
-          className="w-8 h-8 flex items-center justify-center bg-red-100 text-white rounded-full absolute -bottom-1 right-1 cursor-pointer"
+          className="w-8 h-8 flex items-center justify-center bg-red-400 text-white rounded-full absolute -bottom-1 right-1 cursor-pointer"
           onClick={onChooseFile}
         >
           <LuUpload />

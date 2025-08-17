@@ -96,7 +96,7 @@ const LandingPage = () => {
 
         <div className="action-buttons">
           <Link to="/login" className="primary-btn"> Login </Link> 
-          <Link to="/login" className="secondary-btn"> Sign up </Link> 
+          <Link to="/signup" className="secondary-btn"> Sign up </Link> 
         </div>
       </nav>
 
@@ -110,7 +110,7 @@ const LandingPage = () => {
             Taskify makes organizing feel effortless and executing feel natural. Say goodbye to cluttered workflows and scattered priorities. Because great work happens when your tools get out of the way and let your ideas shine.
           </p>
           <div className="banner-buttons">
-            <Link to="/login" className="btn primary-banner-btn">Get Taskify</Link> 
+            <Link to="/signup" className="btn primary-banner-btn">Get Taskify</Link> 
           </div>
         </div>
         <div className="banner-right">
@@ -153,7 +153,7 @@ const LandingPage = () => {
             </div>
             <p>
                 We were tired of juggling planners, sticky notes, chat apps, and endless tabs.
-                So we built Taskify — a space where everything comes together: tasks, plans, priorities, and people.
+                So we built Taskify — a space where everything comes together: tasks, priorities, and people.
                 From a personal to-do list to a team-wide project board, Taskify is designed to feel intuitive,
                 flow naturally, and scale with you. Too many tools, not enough clarity.
             </p>
@@ -189,11 +189,6 @@ const LandingPage = () => {
         <section className="services-section" id="services">
           <div className="services-carousel-container">
             <div className="carousel-track" id="carouselTrack">
-              <div className="service-card">
-                <img src={plannerImg} alt="Planner" className="service-img" />
-                <h3 className="service-title">Planner</h3>
-                <p className="service-description">Plan your day, own your time. Organize and manage tasks efficiently.</p>
-              </div>
 
               <div className="service-card">
                 <img src={todoImg} alt="To-Do Lists" className="service-img" />
@@ -208,15 +203,21 @@ const LandingPage = () => {
               </div>
 
               <div className="service-card">
+                <img src={plannerImg} alt="Planner" className="service-img" />
+                <h3 className="service-title">Download Team Reports</h3>
+                <p className="service-description">Get detailed summaries of your team's work. Export progress reports and insights in one click.</p>
+              </div>
+
+              <div className="service-card">
                 <img src={managePersonalImg} alt="Manage Goals" className="service-img" />
                 <h3 className="service-title">Manage Personal Tasks</h3>
-                <p className="service-description">Track habits, personal projects, and long-term growth.</p>
+                <p className="service-description">Track habits, personal projects, and long-term growth. (Coming Soon)</p>
               </div>
 
               <div className="service-card">
                 <img src={whiteboardImg} alt="Whiteboard" className="service-img" />
                 <h3 className="service-title">Whiteboard</h3>
-                <p className="service-description">Visualize your ideas and connect the dots using digital whiteboards.</p>
+                <p className="service-description">Visualize your ideas and connect the dots using digital whiteboards. (Coming Soon)</p>
               </div>
             </div>
 
@@ -241,7 +242,7 @@ const LandingPage = () => {
             alt="Join our community"
             className="join-community-image"
           />
-          <Link to="/login" className="btn join-community-button">Join Now</Link> 
+          <Link to="/signup" className="btn join-community-button">Join Now</Link> 
 
           <p className="join-community-text">
             You’re not alone on this journey. Join a community that supports your goals and celebrates your wins.

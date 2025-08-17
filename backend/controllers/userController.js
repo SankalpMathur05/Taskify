@@ -52,4 +52,26 @@ const getUserById = async (req, res) => {
     }
 };
 
-module.exports = { getUsers, getUserById};
+// @desc      Delete a user (Admin only)
+// @route     DELETE /api/users/:id
+// @access    Private (Admin)
+const deleteUser = async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Optional: prevent deleting admins
+        if (user.role === "admin") {
+            return res.status(403).json({ message: "Cannot delete admin users" });
+        }
+
+        await user.deleteOne();
+        res.json({ message: "User deleted successfully" });
+    } catch (error) {
+        res.status(500).json({ message: "Server error", error: error.message });
+    }
+};
+
+module.exports = { getUsers, getUserById, deleteUser };

@@ -19,6 +19,16 @@ const ManageUsers = () => {
     }
   };
 
+  // Delete User
+  const handleRemoveUser = async (userId) => {
+    try {
+      await axiosInstance.delete(API_PATHS.USERS.DELETE_USER(userId));
+      setAllUsers((prev) => prev.filter((user) => user._id !== userId));
+    } catch (error) {
+      console.error("Error deleting user:", error);
+    }
+  };
+
   // Download Task Report 
   const handleDownloadReport = async () => {
     try {
@@ -36,8 +46,8 @@ const ManageUsers = () => {
         link.parentNode.removeChild(link);
         window.URL.revokeObjectURL(url);
     } catch (error) {
-        console.error("Error downloading expense details:", error);
-        toast.error("Failed to download expense details. Please try again.");
+        console.error("Error downloading user details:", error);
+        toast.error("Failed to download user details. Please try again.");
     }
   }
 
@@ -61,7 +71,11 @@ const ManageUsers = () => {
             </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             {allUsers?.map(user => (
-                <UserCard key={user.id} userInfo={user} />
+                <UserCard 
+                  key={user.id || user._id} 
+                  userInfo={user} 
+                  onRemove={handleRemoveUser}  
+                />
             ))}
         </div>
         </div>
