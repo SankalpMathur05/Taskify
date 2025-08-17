@@ -1,4 +1,5 @@
 const Task = require("../models/Task");
+const mongoose = require("mongoose");
 
 // @desc      Get all tasks (Admin: all, User: only assigned tasks)
 // @route     GET /api/tasks/
@@ -107,10 +108,14 @@ const createTask = async (req, res) => {
     todoChecklist,
     } = req.body;
 
-    if (!Array.isArray(assignedTo)) {
-    return res
-        .status(400)
-        .json({ message: "assignedTo must be an array of user IDs" });
+    // Validate assignedTo: must be array of valid Mongo IDs
+    if (
+      !Array.isArray(assignedTo) ||
+      !assignedTo.every(id => mongoose.Types.ObjectId.isValid(id))
+    ) {
+      return res.status(400).json({
+        message: "assignedTo must be an array of valid user IDs",
+      });
     }
 
     const task = await Task.create({
@@ -267,8 +272,6 @@ const updateTaskChecklist = async (req, res) => {
         res.status(500).json({ message: "Server error", error: error.message });
     }
 };
-
-
 
 // @desc      Dashboard Data (Admin only)
 // @route     GET /api/tasks/dashboard-data

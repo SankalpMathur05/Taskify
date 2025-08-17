@@ -1,73 +1,97 @@
-import React, { useContext, useEffect, useState} from "react";
-import { SIDE_MENU_DATA , SIDE_MENU_USER_DATA } from "../../utils/data";
+import React, { useContext, useEffect, useState } from "react";
+import { SIDE_MENU_DATA, SIDE_MENU_USER_DATA } from "../../utils/data";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
+import Modal from "../Modal";
+import LogoutAlert from "../LogoutAlert";
 
 const SideMenu = ({ activeMenu }) => {
-    const { user, clearUser } = useContext(UserContext);
-    const [sideMenuData, setSideMenuData] = useState([]);
+  const { user, clearUser } = useContext(UserContext);
+  const [sideMenuData, setSideMenuData] = useState([]);
+  const [openLogoutAlert, setOpenLogoutAlert] = useState(false);
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleClick = (route) => {
-        if (route === "logout") {
-        handleLogout();
-        return;
-        }
+  const handleClick = (route) => {
+    if (route === "logout") {
+      setOpenLogoutAlert(true);
+      return;
+    }
+    navigate(route);
+  };
 
-        navigate(route);
-    };
+  const handleLogout = () => {
+    localStorage.clear();
+    clearUser();
+    navigate("/login");
+  };
 
-    const handleLogout = () => {
-        localStorage.clear();
-        clearUser();
-        navigate("/login");
-    };
+  const DEFAULT_AVATAR = "https://tinyurl.com/defaultUserImageTaskManagerApp";
 
-    useEffect(() => {
-        if (user) {
-        setSideMenuData(user?.role === "admin" ? SIDE_MENU_DATA : SIDE_MENU_USER_DATA);
-        }
-        return () => {};
-    }, [user]);
-    return <div className="w-64 h-[calc(100vh-61px)] bg-white border-r border-gray-200/50 sticky-top-[61px] z-20">
-        <div className="flex flex-col items-center justify-center mb-7 pt-5">
-            <div className="">
-            <img
-                src={user?.profileImageUrl || ""}
-                alt="Profile Image"
-                className="w-20 h-20 bg-slate-400 rounded-full object-cover"
-            />
-            </div>
+  useEffect(() => {
+    if (user) {
+      setSideMenuData(
+        user?.role === "admin" ? SIDE_MENU_DATA : SIDE_MENU_USER_DATA
+      );
+    }
+    return () => {};
+  }, [user]);
 
-            {user?.role === "admin" && (
-            <div className="text-[10px] font-medium text-white bg-red-400 px-3 py-0.5 rounded mt-1">
-                Admin
-            </div>
-            )}
-
-            <h5 className="text-gray-950 font-medium leading-6 mt-3">
-            {user?.name || ""}
-            </h5>
-            
-            <p className="text-[12px] text-gray-500">{user?.email || ""}</p>
+  return (
+    <div className="w-64 h-[calc(100vh-61px)] bg-white border-r border-gray-200/50 sticky-top-[61px] z-20">
+      <div className="flex flex-col items-center justify-center mb-7 pt-5">
+        <div>
+          <img
+            src={user?.profileImageUrl || DEFAULT_AVATAR}
+            alt="Profile Image"
+            className="w-20 h-20 bg-slate-400 rounded-full object-cover"
+          />
         </div>
-        
-        {sideMenuData.map((item, index) => (
-            <button
-                key={`menu_${index}`}
-                className={`w-full flex items-center gap-4 text-[15px] ${
-                    activeMenu == item.label
-                    ? "text-red-400 bg-linear-to-r from-red-50/40 to-red-100/50 border-r-3"
-                    : ""
-                } py-3 px-6 mb-3 cursor-pointer`}
-                onClick={() => handleClick(item.path)}
-            >
-                {<item.icon className="text-xl" />}
-                {item.label}
-            </button>
-        ))}
-        </div>
+
+        {user?.role === "admin" && (
+          <div className="text-[10px] font-medium text-white bg-red-400 px-3 py-0.5 rounded mt-1">
+            Admin
+          </div>
+        )}
+
+        <h5 className="text-gray-950 font-medium leading-6 mt-3">
+          {user?.name || ""}
+        </h5>
+
+        <p className="text-[12px] text-gray-500">{user?.email || ""}</p>
+      </div>
+
+      {sideMenuData.map((item, index) => (
+        <button
+          key={`menu_${index}`}
+          className={`w-full flex items-center gap-4 text-[15px] ${
+            activeMenu === item.label
+              ? "text-red-400 bg-linear-to-r from-red-50/40 to-red-100/50 border-r-3"
+              : ""
+          } py-3 px-6 mb-3 cursor-pointer`}
+          onClick={() => handleClick(item.path)}
+        >
+          {<item.icon className="text-xl" />}
+          {item.label}
+        </button>
+      ))}
+
+      {/* Logout confirmation modal */}
+      <Modal
+        isOpen={openLogoutAlert}
+        onClose={() => setOpenLogoutAlert(false)}
+        title="Logout"
+      >
+        <LogoutAlert
+          content="Are you sure you want to logout?"
+          onDelete={() => {
+            handleLogout();
+            setOpenLogoutAlert(false);
+          }}
+        />
+      </Modal>
+    </div>
+  );
 };
 
 export default SideMenu;
