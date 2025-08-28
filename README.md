@@ -1,29 +1,31 @@
 # Taskify – Task Manager Application
 
-Taskify is a modern and intuitive **task management application** designed to help users organize, collaborate, and boost productivity. With a clean UI, real-time collaboration, and powerful task organization features, Taskify is perfect for personal planning, team projects, and professional workflows.
+The **Task Manager Application** is a full-stack web-based solution designed to help **teams and individuals** organize, assign, and track tasks effectively. The application demonstrates end-to-end development using the **MERN stack**, with a strong focus on secure authentication, role-based dashboards, and responsive design.  
 
 ---
 
-## 🚀 Features
+## 🚀 Features  
 
-- ✅ **Create & Manage Tasks** – Add, edit, and delete tasks with ease.  
-- 📂 **Organize with Boards** – Manage tasks using project boards for better categorization.  
-- 👥 **Collaboration** – Share boards and invite team members to work together.  
-- 📝 **To-Do Lists** – Track personal tasks with simple checklist functionality.  
-- 🖼️ **Whiteboard** – Visualize ideas with an interactive board.  
-- 🔔 **Reminders & Notifications** – Never miss deadlines with alerts.  
-- 🌙 **Dark Mode** – Easy on the eyes during late work hours.  
-- 📱 **Cross-Platform** – Works seamlessly on web and mobile.  
+- 🔑 **Authentication & Authorization** – Secure login/signup with JWT-based authentication and role-based access. Admin registration is restricted via a special access code.  
+- ✅ **Task Management (CRUD)** – Create, view, update, and delete tasks with support for deadlines, statuses, and priority levels.  
+- 📂 **Task Categorization** – Tasks are organized into **Pending**, **In Progress**, and **Completed** states.  
+- 👥 **Role-Based Dashboards** –  
+  - **User Dashboard** – Displays personal tasks, progress statistics, and task distribution.  
+  - **Admin Dashboard** – Provides full task management (create, assign, prioritize, update, delete) with team-wide visibility.  
+- 📊 **Analytics & Visuals** – Interactive charts and graphs for productivity insights.  
+- 🧑‍🤝‍🧑 **Team Management** – Admins can manage members and assign tasks directly.  
+- ⚡ **Real-Time Updates** – Frontend integrated with backend APIs for smooth and responsive task flows.  
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack  
 
-- **Frontend:** React + Tailwind CSS  
-- **Backend:** Node.js / Express (or Firebase, depending on your setup)  
-- **Database:** MongoDB / Firestore  
-- **Authentication:** Firebase Auth / JWT  
-- **Deployment:** Vercel / Netlify (Frontend) & Heroku / Render (Backend)  
+- **Frontend:** React.js + Tailwind CSS  
+- **Backend:** Node.js + Express.js  
+- **Database:** MongoDB  
+- **Authentication:** JWT (Role-Based Access Control)  
+- **Integration:** Axios for API communication  
+- **Deployment:** Vercel (Frontend) / Render (Backend)  
 
 ---
 
@@ -71,4 +73,4 @@ Taskify is a modern and intuitive **task management application** designed to he
 
 ---
 
-👉 Taskify makes productivity **simple, organized, and collaborative**.
+👉 This project showcases **full-stack development, secure authentication, real-time updates, and clean UI/UX design** – making productivity **organized, collaborative, and efficient**.  
