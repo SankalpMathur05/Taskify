@@ -30,43 +30,43 @@ Taskify is a modern and intuitive **task management application** designed to he
 ## 📸 Screenshots
 
 ### 🏠 Landing Page
-![Landing Page](./frontend/Task-Manager/src/assets/images/screenshots/landingPage.png)  
+![Landing Page](frontend/Task-Manager/src/assets/screenshots/landingPage.png)  
 **Description:** Clean and modern landing page introducing Taskify with call-to-action buttons.
 
 ---
 
 ### 📊 Admin Dashboard
-![Admin Dashboard](./frontend/Task-Manager/src/assets/images/screenshots/adminDashboard.png)  
+![Admin Dashboard](frontend/Task-Manager/src/assets/screenshots/adminDashboard.png)  
 **Description:** Overview of all tasks with progress charts, task distribution, and quick stats for admins.
 
 ---
 
 ### ✍️ Create Task
-![Create Task](./frontend/Task-Manager/src/assets/images/screenshots/createTask.png)  
+![Create Task](frontend/Task-Manager/src/assets/screenshots/createTask.png)  
 **Description:** Interface for creating new tasks with title, description, priority, due date, checklist, and attachments.
 
 ---
 
 ### 📂 Manage Tasks
-![Manage Tasks](./frontend/Task-Manager/src/assets/images/screenshots/manageTasks.png)  
+![Manage Tasks](frontend/Task-Manager/src/assets/screenshots/manageTasks.png)  
 **Description:** Kanban-style task management board showing all tasks categorized as Pending, In Progress, and Completed.
 
 ---
 
 ### 👥 Team Members
-![Team Members](./frontend/Task-Manager/src/assets/images/screenshots/team.png)  
+![Team Members](frontend/Task-Manager/src/assets/screenshots/team.png)  
 **Description:** Team management view displaying members with their assigned tasks and statuses.
 
 ---
 
 ### 👤 User Dashboard
-![User Dashboard](./frontend/Task-Manager/src/assets/images/screenshots/userDashboard.png)  
+![User Dashboard](frontend/Task-Manager/src/assets/screenshots/userDashboard.png)  
 **Description:** Personalized dashboard for individual users showing their task statistics and progress.
 
 ---
 
 ### ✅ User Tasks
-![User Tasks](./frontend/Task-Manager/src/assets/images/screenshots/userTasks.png)  
+![User Tasks](frontend/Task-Manager/src/assets/screenshots/userTasks.png)  
 **Description:** Task board for users to manage their own assigned tasks with progress tracking.
 
 ---
