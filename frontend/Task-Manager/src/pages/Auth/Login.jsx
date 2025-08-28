@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react'
-import AuthLayout from '../../components/layouts/authLayout'
-import { useNavigate } from 'react-router-dom'
-import './loginForm.css'
-import Input from '../../components/Inputs/Input'
-import { Link } from 'react-router-dom'
-import { validateEmail } from '../../utils/helper'
-import axiosInstance from '../../utils/axiosInstance'
-import { API_PATHS } from '../../utils/apiPaths'
-import { UserContext } from '../../context/userContext'
+import React, { useContext, useState } from 'react';
+import AuthLayout from '../../components/layouts/AuthLayout';
+import { useNavigate } from 'react-router-dom';
+import './loginForm.css';
+import Input from '../../components/Inputs/Input';
+import { Link } from 'react-router-dom';
+import { validateEmail } from '../../utils/helper';
+import axiosInstance from '../../utils/axiosInstance';
+import { API_PATHS } from '../../utils/apiPaths';
+import { UserContext } from '../../context/userContext';
 
 const Login = () => {
   const [remember, setRemember] = useState(false); // Remove when login is implemented
