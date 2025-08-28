@@ -2,7 +2,9 @@
 
 The **Task Manager Application** is a full-stack web-based solution designed to help **teams and individuals** organize, assign, and track tasks effectively. The application demonstrates end-to-end development using the **MERN stack**, with a strong focus on secure authentication, role-based dashboards, and responsive design.  
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Taskify-blue?style=for-the-badge)](https://taskifyproject.vercel.app/)
+<a href="https://taskifyproject.vercel.app/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Taskify-blue?style=for-the-badge" alt="Live Demo"/>
+</a>
 
 ---
 
