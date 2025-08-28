@@ -7,13 +7,13 @@ import taskifyLogo from '../../assets/images/logo.png';
 import gifMain from '../../assets/images/gif-main.mp4';
 
 // Logo imports
-import vercel from '../../assets/images/vercel.png';
-import trello from '../../assets/images/trello.png';
-import dream11 from '../../assets/images/dream11.png';
-import notion from '../../assets/images/notion.png';
-import deepseek from '../../assets/images/deepseek.png';
-import chatgpt from '../../assets/images/chatgpt.png';
-import instagram from '../../assets/images/instagram.png';
+import gameveda1 from '../../assets/images/gameveda.png';
+import node1 from '../../assets/images/node.png';
+import pandaprep1 from '../../assets/images/pandaprep.png';
+import quadrafort1 from '../../assets/images/quadrafort.png'
+import react1 from '../../assets/images/react.png';
+import srijan1 from '../../assets/images/srijan.png';
+import ted1 from '../../assets/images/ted.png';
 
 // About Us image imports
 import aboutImg1 from '../../assets/images/about-img1.png';
@@ -32,26 +32,20 @@ import whiteboardImg from '../../assets/images/whiteboard.png';
 import joinCommunityImg from '../../assets/images/joinOurCommunity.png';
 
 // Logos for Trusted by Teams section
-import amazon from '../../assets/images/teamsTrust/amazon.png';
-import appleMusic from '../../assets/images/teamsTrust/appleMusic.png';
-import spotify from '../../assets/images/teamsTrust/spotify.png';
-import flipkart from '../../assets/images/teamsTrust/flipkart.png';
-import chatgptTrust from '../../assets/images/teamsTrust/chatgpt.png';
-import deepseekTrust from '../../assets/images/teamsTrust/deepseek.png';
-import dream11Trust from '../../assets/images/teamsTrust/dream11.png';
-import instagramTrust from '../../assets/images/teamsTrust/instagram.png';
-import netflix from '../../assets/images/teamsTrust/netflix.png';
-import notionTrust from '../../assets/images/teamsTrust/notion.png';
-import trelloTrust from '../../assets/images/teamsTrust/trello.png';
+import cdc from '../../assets/images/teamsTrust/cdc.png';
+import gameveda from '../../assets/images/teamsTrust/gameveda.png';
+import grs from '../../assets/images/teamsTrust/grs.png';
+import node from '../../assets/images/teamsTrust/node.png';
+import pandaprep from '../../assets/images/teamsTrust/pandaprep.png';
+import qrace from '../../assets/images/teamsTrust/qrace.png';
+import quadrafort from '../../assets/images/teamsTrust/quadrafort.png';
+import react from '../../assets/images/teamsTrust/react.png';
+import srijan from '../../assets/images/teamsTrust/srijan.png';
+import ted from '../../assets/images/teamsTrust/ted.png';
+import vips from '../../assets/images/teamsTrust/vips.png';
 
 // Footer assets
 import footerLogo from '../../assets/images/Footer/taskify.png';
-import footerInstagram from '../../assets/images/Footer/instagram.svg';
-import footerFacebook from '../../assets/images/Footer/facebook.png';
-import footerTelegram from '../../assets/images/Footer/telegram.png';
-import footerWhatsapp from '../../assets/images/Footer/whatsapp.svg';
-import footerYoutube from '../../assets/images/Footer/youtube.svg';
-import footerXlogo from '../../assets/images/Footer/twitter.svg';
 import footerGmail from '../../assets/images/Footer/gmail.svg';
 
 const gridItems = [
@@ -64,22 +58,22 @@ const gridItems = [
     { type: 'empty', className: 'empty-top-7' },    // Row 1, Col 7 (above Instagram)
 
     // Row 2 and 3 items (logos that span 2 rows)
-    { type: 'logo', className: 'spotify', src: spotify, alt: 'Spotify Logo' },
-    { type: 'logo', className: 'flipkart', src: flipkart, alt: 'Flipkart Logo' },
-    { type: 'logo', className: 'trello', src: trelloTrust, alt: 'Trello Logo' },
-    { type: 'logo', className: 'chatgpt', src: chatgptTrust, alt: 'ChatGPT Logo' },
-    { type: 'logo', className: 'deepseek', src: deepseekTrust, alt: 'Deepseek Logo' },
-    { type: 'logo', className: 'notion', src: notionTrust, alt: 'Notion Logo' },
-    { type: 'logo', className: 'instagram', src: instagramTrust, alt: 'Instagram Logo' },
+    { type: 'logo', className: 'grs', src: grs, alt: 'GRS Logo' },
+    { type: 'logo', className: 'vips', src: vips, alt: 'Vips Logo' },
+    { type: 'logo', className: 'srijan', src: srijan, alt: 'Srijan Logo' },
+    { type: 'logo', className: 'pandaprep', src: pandaprep, alt: 'Pandaprep Logo' },
+    { type: 'logo', className: 'ted', src: ted, alt: 'TEDx Logo' },
+    { type: 'logo', className: 'quadrafort', src: quadrafort, alt: 'Quadrafort Logo' },
+    { type: 'logo', className: 'react', src: react, alt: 'React Bits Logo' },
 
     // Row 4 and 5 items
-    { type: 'logo', className: 'netflix', src: netflix, alt: 'Netflix Logo' },
-    { type: 'logo', className: 'apple-music', src: appleMusic, alt: 'Apple Music Logo' },
+    { type: 'logo', className: 'cdc', src: cdc, alt: 'CDC Logo' },
+    { type: 'logo', className: 'gameveda', src: gameveda, alt: 'GameVeda Logo' },
     { type: 'empty', className: 'empty-middle-1' }, // Placeholder to push Dream11
     { type: 'empty', className: 'empty-middle-2' }, // Placeholder to push Dream11
     { type: 'empty', className: 'empty-middle-3' }, // Placeholder for the gap near Amazon
-    { type: 'logo', className: 'dream11', src: dream11Trust, alt: 'Dream11 Logo' }, 
-    { type: 'logo', className: 'amazon', src: amazon, alt: 'Amazon Logo' },
+    { type: 'logo', className: 'node', src: node, alt: 'Node JS Logo' }, 
+    { type: 'logo', className: 'qrace', src: qrace, alt: 'QRACE Logo' },
 ];
 
 const LandingPage = () => {
@@ -121,13 +115,13 @@ const LandingPage = () => {
         <div className="trusted-by">
         <p className="trusted-title">Trusted by top teams</p>
             <div className="trusted-logos">
-                <img src={vercel} alt="Vercel" />
-                <img src={trello} alt="Trello" />
-                <img src={dream11} alt="Dream11" />
-                <img src={notion} alt="Notion" />
-                <img src={deepseek} alt="Deepseek" />
-                <img src={chatgpt} alt="ChatGPT" />
-                <img src={instagram} alt="Instagram" />
+                <img src={pandaprep1} alt="Pandaprep" />
+                <img src={ted1} alt="TEDx" />
+                <img src={react1} alt="React" />
+                <img src={srijan1} alt="Srijan" />
+                <img src={gameveda1} alt="Gameveda" />
+                <img src={quadrafort1} alt="Quadrafort" />
+                <img src={node1} alt="Node JS" />
             </div>
         </div>
 
@@ -275,46 +269,34 @@ const LandingPage = () => {
         <footer className="footer">
             <div className="footer-left">
             <img src={footerLogo} alt="Taskify Logo" className="footer-logo" />
+            </div>
+
+            <div className="footer-center">
+              <div className="footer-column">
+                  <a href="https://www.linkedin.com/in/sankalp-mathur-985a171b0/" target="_blank" rel="noopener noreferrer">
+                    <h4>LinkedIn</h4>
+                  </a>
+
+              </div>
+              <div className="footer-column">
+                  <a href="https://github.com/SankalpMathur05" target="_blank" rel="noopener noreferrer">
+                    <h4>Github</h4>
+                  </a>
+              </div>
+              <div className="footer-column">
+                  <a href="https://your-portfolio.com" target="_blank" rel="noopener noreferrer"> 
+                    <h4>Portfolio</h4>
+                  </a>
+              </div>
+            </div>
+
+            <div className="footer-right">
             <p className="support-label">Support Inquiries</p>
             <div className="email-row">
                 <img src={footerGmail} alt="gmail" className="email-icon" />
-                <span className="email-text">support@taskify.com</span>
-            </div>
-            <div className="social-icons">
-                <img src={footerInstagram} alt="Instagram" />
-                <img src={footerFacebook} alt="Facebook" />
-                <img src={footerTelegram} alt="Telegram" />
-                <img src={footerWhatsapp} alt="WhatsApp" />
-                <img src={footerYoutube} alt="YouTube" />
-                <img src={footerXlogo} alt="X" />
-            </div>
-            </div>
-            <div className="footer-right">
-            <div className="footer-column">
-                <h4>Whiteboard</h4>
-                <p>Calendar View</p>
-                <p>Create New Task</p>
-                <p>To-do List</p>
-                <p>Team Boards</p>
-            </div>
-            <div className="footer-column">
-                <h4>Resources</h4>
-                <p>Help Center</p>
-                <p>FAQs</p>
-                <p>User Guides</p>
-            </div>
-            <div className="footer-column">
-                <h4>Collaboration</h4>
-                <p>Team Management</p>
-                <p>Share Projects</p>
-                <p>Invite Members</p>
-            </div>
-            <div className="footer-column">
-                <h4>Explore</h4>
-                <p>Pricing</p>
-                <p>Task Templates</p>
-                <p>Productivity Tips</p>
-                <p>Premium Features</p>
+                <a href="mailto:sankalpmathur4@gmail.com">
+                    <span className="email-text">sankalpmathur4@gmail.com</span>
+                </a>
             </div>
             </div>
         </footer>
