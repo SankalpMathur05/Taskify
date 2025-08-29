@@ -1,4 +1,6 @@
-export const BASE_URL = "https://taskify-0csh.onrender.com" || "http://localhost:5000";
+export const BASE_URL = window.location.hostname === "localhost"
+  ? "http://localhost:5000"
+  : "https://taskify-0csh.onrender.com";
 
 // utils/apiPaths.js
 export const API_PATHS = {
