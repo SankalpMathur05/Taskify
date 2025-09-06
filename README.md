@@ -29,7 +29,7 @@ The **Task Manager Application** is a full-stack web-based solution designed to 
 - **Database:** MongoDB  
 - **Authentication:** JWT (Role-Based Access Control)  
 - **Integration:** Axios for API communication  
-- **Deployment:** Vercel (Frontend) / Render (Backend)  
+- **Deployment:** Vercel (Frontend & Backend)
 
 ---
 
