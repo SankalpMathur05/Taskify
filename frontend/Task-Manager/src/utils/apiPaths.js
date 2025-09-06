@@ -1,6 +1,6 @@
 export const BASE_URL = window.location.hostname === "localhost"
   ? "http://localhost:5000"
-  : "https://taskify-0csh.onrender.com";
+  : "taskify-backend-kohl.vercel.app";
 
 // utils/apiPaths.js
 export const API_PATHS = {
